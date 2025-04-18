@@ -1,5 +1,7 @@
 
-import { Target, Eye, Diamond, Hash, Layers, Shield } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Target, Eye, Diamond, Hash, Layers, Shield, ArrowLeft } from "lucide-react";
+import { Footer } from "@/components/Footer";
 
 const Features = () => {
   const features = [
@@ -40,8 +42,10 @@ const Features = () => {
       <header className="py-4 px-4 bg-[#0A1627] border-b border-blue-900/30">
         <div className="container mx-auto">
           <div className="flex items-center gap-2">
-            <span className="text-blue-500 font-bold text-2xl">F</span>
-            <h1 className="text-xl font-bold">LIGHT-RADAR.cc</h1>
+            <Link to="/" className="text-blue-500 hover:text-blue-400">
+              <ArrowLeft className="w-6 h-6" />
+            </Link>
+            <h1 className="text-xl font-bold">FLIGHT-RADAR.cc</h1>
           </div>
         </div>
       </header>
@@ -64,6 +68,8 @@ const Features = () => {
           ))}
         </div>
       </main>
+
+      <Footer />
     </div>
   );
 };
