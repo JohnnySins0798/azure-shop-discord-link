@@ -1,10 +1,10 @@
-
+import { Link } from "react-router-dom";
 import { ProductCard } from "@/components/ProductCard";
 import { ChevronDown } from "lucide-react";
 
 const products = [
   {
-    title: "Premium Plan - 3 Months",
+    title: "FLIGHT-RADAR - 3 Months",
     description: "Get access to all premium features for 3 months. Includes priority support and exclusive content.",
     price: "€15.75",
     salePrice: "€13.12",
@@ -69,13 +69,13 @@ const Index = () => {
       <header className="py-4 px-4 bg-[#0A1627] border-b border-blue-900/30">
         <div className="container mx-auto flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <span className="text-blue-500 font-bold text-2xl">P</span>
-            <h1 className="text-xl font-bold">PREMIUM STORE</h1>
+            <span className="text-blue-500 font-bold text-2xl">F</span>
+            <h1 className="text-xl font-bold">LIGHT-RADAR.cc</h1>
           </div>
           <nav className="hidden md:flex gap-6 text-sm">
-            <a href="#" className="text-gray-400 hover:text-white">BUY</a>
-            <a href="#" className="text-gray-400 hover:text-white">FEATURES</a>
-            <a href="#" className="text-gray-400 hover:text-white">DOWNLOAD</a>
+            <Link to="/" className="text-gray-400 hover:text-white">HOME</Link>
+            <Link to="/features" className="text-gray-400 hover:text-white">FEATURES</Link>
+            <a href="#products" className="text-gray-400 hover:text-white">BUY</a>
             <a href="#" className="text-gray-400 hover:text-white">FORUM</a>
           </nav>
         </div>
@@ -83,20 +83,22 @@ const Index = () => {
 
       <main className="relative">
         <div className="h-[500px] bg-gradient-to-b from-[#0A1627] to-[#020817] flex flex-col items-center justify-center text-center px-4">
-          <h2 className="text-4xl font-bold mb-2">PREMIUM STORE</h2>
-          <p className="text-gray-400 text-lg mb-8">one step ahead of your spread</p>
+          <h2 className="text-4xl font-bold mb-2">FLIGHT-RADAR.cc</h2>
+          <p className="text-gray-400 max-w-3xl mb-8 leading-relaxed">
+            A wonderful cheat for CS2. Comfortable interface; A large functionality and unique features: wallhack with OBS bypass; Smooth legit aimbot, fast rage-bot; Inventory, profile, and medal changers; Legit anti-aims, anti-kick. Cheat will provide you lots of advantages over your opponents in any situation.
+          </p>
           <div className="flex gap-4">
-            <button className="bg-blue-500 text-white px-8 py-2 rounded hover:bg-blue-600">
+            <Link to="/features" className="bg-blue-500 text-white px-8 py-2 rounded hover:bg-blue-600">
               MORE
-            </button>
-            <button className="bg-blue-500 text-white px-8 py-2 rounded hover:bg-blue-600">
+            </Link>
+            <a href="#products" className="bg-blue-500 text-white px-8 py-2 rounded hover:bg-blue-600">
               BUY
-            </button>
+            </a>
           </div>
           <ChevronDown className="absolute bottom-8 text-blue-500 animate-bounce" size={32} />
         </div>
 
-        <section className="container mx-auto py-16 px-4">
+        <section id="products" className="container mx-auto py-16 px-4">
           <h3 className="text-center mb-12">
             <span className="text-gray-400">OUR</span>{" "}
             <span className="text-blue-500">PRODUCTS</span>
