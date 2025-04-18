@@ -34,7 +34,7 @@ export function ProductCard({
 
   const handlePurchase = () => {
     // Replace this with your Discord webhook URL
-    const discordUrl = "YOUR_DISCORD_WEBHOOK_URL";
+    const discordUrl = "https://discord.gg/vg7bNEavP5";
     window.open(discordUrl, "_blank");
     toast.success("Redirecting to purchase...");
   };
