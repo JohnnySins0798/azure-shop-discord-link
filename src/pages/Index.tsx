@@ -8,8 +8,8 @@ const products = [
     description: "Get access to all premium features for 3 months. Includes priority support and exclusive content.",
     price: "€15",
     duration: "3 Months",
-    isSale: true,
-    isFeatured: true,
+    isSale: false,
+    isFeatured: false,
     releaseDate: "Mar 15, 2021",
     systemRequirements: [
       "Windows 10/11 - 64-Bit",
@@ -28,7 +28,7 @@ const products = [
     description: "Lifetime access to FLIGHT-RADAR. Best value for dedicated users.",
     price: "€30",
     duration: "Lifetime",
-    isFeatured: true,
+    isFeatured: false,
     releaseDate: "Mar 15, 2025",
     systemRequirements: [
       "Windows 10/11 - 64-Bit",
@@ -47,7 +47,7 @@ const products = [
     description: " Get FLIGHT-RADAR for 1 Month.",
     price: "€8",
     duration: "1 Month",
-    isSale: true,
+    isSale: false,
     releaseDate: "Mar 15, 2025",
     systemRequirements: [
       "Windows 10/11 - 64-Bit",
