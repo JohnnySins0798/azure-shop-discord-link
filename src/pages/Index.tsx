@@ -6,7 +6,7 @@ const products = [
   {
     title: "FLIGHT-RADAR - 3 Months",
     description: "Get access to all premium features for 3 months. Includes priority support and exclusive content.",
-    price: "€15.75",
+    price: "€15",
     salePrice: "€13.12",
     duration: "3 Months",
     isSale: true,
@@ -25,12 +25,12 @@ const products = [
     ]
   },
   {
-    title: "Premium Plan - Lifetime",
-    description: "Lifetime access to all premium features. Best value for dedicated users.",
-    price: "€99.99",
+    title: "FLIGHT-RADAR - Lifetime",
+    description: "Lifetime access to FLIGHT-RADAR. Best value for dedicated users.",
+    price: "€30",
     duration: "Lifetime",
     isFeatured: true,
-    releaseDate: "Mar 15, 2021",
+    releaseDate: "Mar 15, 2025",
     systemRequirements: [
       "Windows 10/11 - 64-Bit",
       "Latest Drivers",
@@ -44,12 +44,12 @@ const products = [
     ]
   },
   {
-    title: "Premium Plan - Monthly",
-    description: "Try out all premium features with our monthly subscription plan.",
-    price: "€7.99",
+    title: "FLIGHT RADAR - Monthly",
+    description: " Get FLIGHT-RADAR for 1 Month.",
+    price: "€8",
     duration: "1 Month",
     isSale: true,
-    releaseDate: "Mar 15, 2021",
+    releaseDate: "Mar 15, 2025",
     systemRequirements: [
       "Windows 10/11 - 64-Bit",
       "Latest Drivers",
