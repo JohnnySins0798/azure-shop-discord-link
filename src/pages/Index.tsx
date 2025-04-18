@@ -7,11 +7,10 @@ const products = [
     title: "FLIGHT-RADAR - 3 Months",
     description: "Get access to all premium features for 3 months. Includes priority support and exclusive content.",
     price: "€15",
-    salePrice: "€13.12",
     duration: "3 Months",
     isSale: true,
     isFeatured: true,
-    releaseDate: "Jun 27, 2021",
+    releaseDate: "Mar 15, 2021",
     systemRequirements: [
       "Windows 10/11 - 64-Bit",
       "Latest Drivers",
