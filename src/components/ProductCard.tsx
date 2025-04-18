@@ -32,45 +32,33 @@ export function ProductCard({
 }: ProductCardProps) {
   const [isExpanded, setIsExpanded] = useState(false);
 
-  const handlePurchase = async () => {
-    try {
-      const webhookUrl = "YOUR_DISCORD_WEBHOOK_URL"; // Replace with your Discord webhook URL
-      const message = {
-        content: `New Purchase!\nProduct: ${title}\nPrice: ${salePrice || price}\nDuration: ${duration}`,
-      };
-
-      await fetch(webhookUrl, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(message),
-      });
-
-      toast.success("Purchase successful! Check Discord for confirmation.");
-    } catch (error) {
-      toast.error("Failed to process purchase. Please try again.");
-    }
+  const handlePurchase = () => {
+    // Replace this with your Discord webhook URL
+    const discordUrl = "YOUR_DISCORD_WEBHOOK_URL";
+    window.open(discordUrl, "_blank");
+    toast.success("Redirecting to purchase...");
   };
 
   return (
-    <Card className="w-full max-w-md bg-secondary border-gray-800 relative overflow-hidden">
+    <Card className="w-full bg-[#0A1627] border-blue-900/30 relative overflow-hidden hover:border-blue-500/50 transition-all">
       {isSale && (
         <div className="absolute top-0 left-0 bg-green-500 text-white px-4 py-1 rotate-[-45deg] translate-x-[-30%] translate-y-[60%]">
           SALE
         </div>
       )}
       {isFeatured && (
-        <div className="absolute top-0 right-0 bg-red-500 text-white px-4 py-1 rotate-[45deg] translate-x-[30%] translate-y-[60%]">
+        <div className="absolute top-0 right-0 bg-blue-500 text-white px-4 py-1 rotate-[45deg] translate-x-[30%] translate-y-[60%]">
           FEATURED
         </div>
       )}
       <CardHeader>
         <div className="flex justify-between items-center">
-          <CardTitle className="text-xl font-bold text-primary">{title}</CardTitle>
+          <CardTitle className="text-xl font-bold text-white">{title}</CardTitle>
           <Button
             variant="ghost"
             size="icon"
             onClick={() => setIsExpanded(!isExpanded)}
-            className="text-primary"
+            className="text-blue-500 hover:text-blue-400"
           >
             {isExpanded ? <ChevronUp /> : <ChevronDown />}
           </Button>
@@ -88,7 +76,7 @@ export function ProductCard({
               {salePrice ? (
                 <div>
                   <p className="text-lg line-through text-gray-500">{price}</p>
-                  <p className="text-2xl font-bold text-green-500">{salePrice}</p>
+                  <p className="text-2xl font-bold text-blue-500">{salePrice}</p>
                 </div>
               ) : (
                 <p className="text-2xl font-bold text-white">{price}</p>
@@ -97,14 +85,14 @@ export function ProductCard({
           </div>
 
           {isExpanded && (
-            <div className="space-y-4 mt-4 border-t border-gray-800 pt-4">
+            <div className="space-y-4 mt-4 border-t border-blue-900/30 pt-4">
               <div>
-                <h3 className="text-lg font-semibold text-primary mb-2">Description</h3>
+                <h3 className="text-lg font-semibold text-blue-500 mb-2">Description</h3>
                 <p className="text-gray-300">{description}</p>
               </div>
               
               <div>
-                <h3 className="text-lg font-semibold text-primary mb-2">System Requirements</h3>
+                <h3 className="text-lg font-semibold text-blue-500 mb-2">System Requirements</h3>
                 <ul className="list-disc list-inside text-gray-300">
                   {systemRequirements.map((req, index) => (
                     <li key={index}>{req}</li>
@@ -113,7 +101,7 @@ export function ProductCard({
               </div>
 
               <div>
-                <h3 className="text-lg font-semibold text-primary mb-2">Features</h3>
+                <h3 className="text-lg font-semibold text-blue-500 mb-2">Features</h3>
                 <ul className="list-disc list-inside text-gray-300">
                   {features.map((feature, index) => (
                     <li key={index}>{feature}</li>
@@ -125,7 +113,7 @@ export function ProductCard({
 
           <Button 
             onClick={handlePurchase}
-            className="w-full bg-primary hover:bg-primary/80 text-white"
+            className="w-full bg-blue-500 hover:bg-blue-600 text-white transition-colors"
           >
             Purchase
           </Button>
@@ -133,4 +121,4 @@ export function ProductCard({
       </CardContent>
     </Card>
   );
-}
+};
