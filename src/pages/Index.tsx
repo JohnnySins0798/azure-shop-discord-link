@@ -10,7 +10,7 @@ const products = [
     duration: "3 Months",
     isSale: false,
     isFeatured: false,
-    releaseDate: "Mar 15, 2021",
+    releaseDate: "Mar 15, 2025",
     systemRequirements: [
       "Windows 10/11 - 64-Bit",
       "Latest Drivers",
