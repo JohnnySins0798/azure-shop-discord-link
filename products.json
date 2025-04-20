@@ -1,0 +1,68 @@
+
+[
+  {
+    "title": "Basic Flight Tracker",
+    "description": "Access real-time flight data with our basic tracking tool.",
+    "price": "$29.99",
+    "salePrice": null,
+    "duration": "1 Month",
+    "isSale": false,
+    "isFeatured": false,
+    "releaseDate": "2024-01-15",
+    "systemRequirements": [
+      "Modern web browser",
+      "Internet connection",
+      "No installation required"
+    ],
+    "features": [
+      "Basic flight information",
+      "Limited historical data",
+      "Standard updates"
+    ]
+  },
+  {
+    "title": "Premium Flight Tracker",
+    "description": "Enhanced flight tracking with additional features for aviation enthusiasts.",
+    "price": "$79.99",
+    "salePrice": "$59.99",
+    "duration": "6 Months",
+    "isSale": true,
+    "isFeatured": false,
+    "releaseDate": "2024-02-20",
+    "systemRequirements": [
+      "Modern web browser",
+      "Internet connection",
+      "1GB RAM minimum"
+    ],
+    "features": [
+      "Real-time flight data",
+      "Full historical archive",
+      "Flight path visualization",
+      "Weather overlay"
+    ]
+  },
+  {
+    "title": "Professional Flight Tracker",
+    "description": "Full-featured flight tracking solution for professionals and businesses.",
+    "price": "$149.99",
+    "salePrice": null,
+    "duration": "12 Months",
+    "isSale": false,
+    "isFeatured": true,
+    "releaseDate": "2024-03-10",
+    "systemRequirements": [
+      "Modern web browser",
+      "High-speed internet connection",
+      "2GB RAM recommended",
+      "Screen resolution 1280x720 or higher"
+    ],
+    "features": [
+      "Real-time global coverage",
+      "Unlimited historical data",
+      "Advanced filters and alerts",
+      "API access for custom integrations",
+      "24/7 technical support",
+      "Custom dashboards"
+    ]
+  }
+]
